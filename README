@@ -135,6 +135,12 @@ Example:
     dvbcsa_bs_encrypt(key, b, 184);
 
 
+    DVBCSA_KEY_ECM
+
+    unsigned char ecm = (ecm_caid >> 8 == 0x09 && (ecm_data[2] - ecm_data[4]) == 4) ? ecm_data[21] : 0;
+    dvbcsa_bs_key_set_ecm(ecm, cw, key);
+
+
 Portability
 ===========
 
