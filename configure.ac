@@ -71,7 +71,7 @@ elif test "$enable_altivec" = "yes" ; then
 elif test "$enable_neon" = "yes" ; then
      AC_DEFINE(DVBCSA_USE_NEON, 1, Using NEON bitslice.)
      case $host_cpu in
-         arm64*|aarch64*) GCC_CFLAGS="$GCC_CFLAGS -mfpu=neon" ;;
+         arm64*|aarch64*) ;;
          arm*) GCC_CFLAGS="$GCC_CFLAGS -mfpu=neon" ;;
      esac
 
